@@ -40,20 +40,20 @@ public class Main {
 
                 if (!row[0].equals("id")) {
                     idBuilder.append(row[0]).append(";");
-                } else idBuilder.append(row[0]).append(":\n");
+                } else idBuilder.append(row[0]).append(":").append("\n");
 
                 versionArray.add(row[1]);
                 versionArray = removeDuplicates(versionArray);
 
                 if (!row[2].equals("path")) {
                     pathBuilder.append(row[2]).append(";");
-                } else pathBuilder.append(row[2]).append(":\n");
+                } else pathBuilder.append(row[2]).append(":").append("\n");
             }
 
             for (String versionData : versionArray) {
                 if (!versionData.equals("version")) {
                     versionBuilder.append(versionData).append(";");
-                } else versionBuilder.append(versionData).append(":\n");
+                } else versionBuilder.append(versionData).append(":").append("\n");
             }
 
             String id = idBuilder.toString();
@@ -124,7 +124,7 @@ public class Main {
 
                 if (!row[1].equals("name")) {
                     nameBuilder.append(row[1]).append(";");
-                } else nameBuilder.append(row[1]).append(":\n");
+                } else nameBuilder.append(row[1]).append(":").append("\n");
             }
 
             idArray.addAll(idOldArray);
@@ -133,13 +133,13 @@ public class Main {
             for (String idData : idArray) {
                 if (!idData.equals("id")) {
                     idBuilder.append(idData).append(";");
-                } else idBuilder.append(idData).append(":\n");
+                } else idBuilder.append(idData).append(":").append("\n");
             }
 
             for (String versionData : sexArray) {
                 if (!versionData.equals("sex")) {
                     sexBuilder.append(versionData).append(";");
-                } else sexBuilder.append(versionData).append(":\n");
+                } else sexBuilder.append(versionData).append(":").append("\n");
             }
 
             String id = idBuilder.toString();
