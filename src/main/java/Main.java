@@ -14,7 +14,9 @@ public class Main {
         String CSV2 = "input2.csv";
 
         readFirstData(CSV1);
-        readSecondData(CSV2);
+        Thread myThready = new Thread(() -> readSecondData(CSV2));
+        myThready.start();
+
     }
 
     private static void readFirstData(String file) {
